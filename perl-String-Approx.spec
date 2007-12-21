@@ -12,6 +12,7 @@ Group:          Development/Perl
 Url:            http://search.cpan.org/dist/%{module}
 Source:         http://www.cpan.org/modules/by-module/String/%{module}-%{version}.tar.bz2
 Buildrequires:  perl-devel
+BuildRoot:      %{_tmppath}/%{name}-%{version}
 
 %description
 String::Approx lets you match and substitute strings approximately. With this
