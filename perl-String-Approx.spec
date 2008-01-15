@@ -1,7 +1,7 @@
 %define module  String-Approx
 %define name    perl-%{module}
 %define version 3.26
-%define release %mkrel 3
+%define release %mkrel 4
 
 Name:           %{name}
 Version:        %{version}
