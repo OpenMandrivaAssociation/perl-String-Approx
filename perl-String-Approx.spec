@@ -1,18 +1,18 @@
-%define module  String-Approx
-%define name    perl-%{module}
-%define version 3.26
-%define release %mkrel 7
+%define upstream_name    String-Approx
+%define upstream_version 3.26
 
-Name:           %{name}
-Version:        %{version}
-Release:        %{release}
-Summary:        Perl extension for approximate matching (fuzzy matching)
-License:        GPL or Artistic
-Group:          Development/Perl
-Url:            http://search.cpan.org/dist/%{module}
-Source:         http://www.cpan.org/modules/by-module/String/%{module}-%{version}.tar.bz2
+Name:       perl-%{upstream_name}
+Version:    %perl_convert_version %{upstream_version}
+Release:    %mkrel 1
+
+Summary:    Perl extension for approximate matching (fuzzy matching)
+License:    GPL+ or Artistic
+Group:      Development/Perl
+Url:        http://search.cpan.org/dist/%{upstream_name}
+Source0:    http://www.cpan.org/modules/by-module/String/%{upstream_name}-%{upstream_version}.tar.bz2
+
 Buildrequires:  perl-devel
-BuildRoot:      %{_tmppath}/%{name}-%{version}
+BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}
 
 %description
 String::Approx lets you match and substitute strings approximately. With this
@@ -21,7 +21,7 @@ vocabularies (colour color), genetic mutations (GAG ACT), abbreviations
 (McScot, MacScot).
 
 %prep
-%setup -q -n %{module}-%{version}
+%setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
@@ -43,4 +43,3 @@ rm -rf %{buildroot}
 %{perl_vendorarch}/auto/String
 %{perl_vendorarch}/String
 %{_mandir}/*/*
-
