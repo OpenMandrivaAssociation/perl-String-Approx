@@ -1,2 +1,4 @@
+removed_sources:
+  String-Approx-3.26.tar.bz2: 8b848b684f0fd07a00cc54466ab63edf03330333
 sources:
-  "String-Approx-3.26.tar.bz2": 8b848b684f0fd07a00cc54466ab63edf03330333
+  String-Approx-3.27.tar.gz: 51543a2c0a540588aebf35bd7ba414fb9be6d464

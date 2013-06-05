@@ -2,14 +2,14 @@
 %define upstream_version 3.26
 
 Name:       perl-%{upstream_name}
-Version:    %perl_convert_version %{upstream_version}
-Release:	3
+Version:    %perl_convert_version 3.27
+Release:	1
 
 Summary:    Perl extension for approximate matching (fuzzy matching)
 License:    GPL+ or Artistic
 Group:      Development/Perl
 Url:        http://search.cpan.org/dist/%{upstream_name}
-Source0:    http://www.cpan.org/modules/by-module/String/%{upstream_name}-%{upstream_version}.tar.bz2
+Source0:    http://www.cpan.org/modules/by-module/String/String-Approx-3.27.tar.gz
 
 Buildrequires:  perl-devel
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}
@@ -107,4 +107,5 @@ rm -rf %{buildroot}
 
 * Mon Dec 15 2003 Guillaume Rousse <guillomovitch@mandrake.org> 3.23-1mdk
 - first mdk release
+
 
