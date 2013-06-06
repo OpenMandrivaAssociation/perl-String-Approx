@@ -1,18 +1,16 @@
 %define upstream_name    String-Approx
-%define upstream_version 3.26
-
+%define upstream_version 3.27
 Name:       perl-%{upstream_name}
-Version:    %perl_convert_version %{upstream_version}
-Release:	3
+Version:    %perl_convert_version 3.27
+Release:	1
 
 Summary:    Perl extension for approximate matching (fuzzy matching)
 License:    GPL+ or Artistic
 Group:      Development/Perl
 Url:        http://search.cpan.org/dist/%{upstream_name}
-Source0:    http://www.cpan.org/modules/by-module/String/%{upstream_name}-%{upstream_version}.tar.bz2
+Source0:    http://www.cpan.org/modules/by-module/String/String-Approx-3.27.tar.gz
 
-Buildrequires:  perl-devel
-BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}
+BuildRequires:  perl-devel
 
 %description
 String::Approx lets you match and substitute strings approximately. With this
@@ -28,18 +26,13 @@ vocabularies (colour color), genetic mutations (GAG ACT), abbreviations
 %make CFLAGS="%{optflags}"
 
 %install
-rm -rf %{buildroot}
 %makeinstall_std
 
 %check
 %{__make} test
 
-%clean 
-rm -rf %{buildroot}
-
 %files 
-%defattr(-,root,root)
-%doc Artistic BUGS COPYRIGHT COPYRIGHT.agrep ChangeLog LGPL PROBLEMS README README.apse
+%doc Artistic COPYRIGHT COPYRIGHT.agrep ChangeLog LGPL PROBLEMS README README.apse
 %{perl_vendorarch}/auto/String
 %{perl_vendorarch}/String
 %{_mandir}/*/*
@@ -107,4 +100,5 @@ rm -rf %{buildroot}
 
 * Mon Dec 15 2003 Guillaume Rousse <guillomovitch@mandrake.org> 3.23-1mdk
 - first mdk release
+
 
