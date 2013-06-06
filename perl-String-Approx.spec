@@ -1,6 +1,5 @@
 %define upstream_name    String-Approx
-%define upstream_version 3.26
-
+%define upstream_version 3.27
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version 3.27
 Release:	1
