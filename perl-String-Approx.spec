@@ -2,7 +2,7 @@
 %define upstream_version 3.27
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version 3.27
-Release:	2
+Release:	3
 
 Summary:    Perl extension for approximate matching (fuzzy matching)
 License:    GPL+ or Artistic
