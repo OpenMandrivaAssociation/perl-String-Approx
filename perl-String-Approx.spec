@@ -10,6 +10,7 @@ Group:      Development/Perl
 Url:        https://search.cpan.org/dist/%{upstream_name}
 Source0:    http://www.cpan.org/modules/by-module/String/String-Approx-3.27.tar.gz
 
+BuildRequires:	make
 BuildRequires:  perl-devel
 
 %description
