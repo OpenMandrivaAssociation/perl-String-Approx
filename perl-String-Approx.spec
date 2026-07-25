@@ -1,14 +1,14 @@
 %define upstream_name    String-Approx
-%define upstream_version 3.27
+%define upstream_version 3.28
 Name:       perl-%{upstream_name}
-Version:    %perl_convert_version 3.27
-Release:	3
+Version:    %{upstream_version}
+Release:	1
 
 Summary:    Perl extension for approximate matching (fuzzy matching)
 License:    GPL+ or Artistic
 Group:      Development/Perl
-Url:        https://search.cpan.org/dist/%{upstream_name}
-Source0:    http://www.cpan.org/modules/by-module/String/String-Approx-3.27.tar.gz
+Url:        https://metacpan.org/dist/String-Approx
+Source0:    https://cpan.metacpan.org/authors/id/J/JH/JHI/String-Approx-3.28.tar.gz
 
 BuildRequires:	make
 BuildRequires:  perl-devel
