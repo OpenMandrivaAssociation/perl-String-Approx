@@ -1,8 +1,7 @@
 %define upstream_name    String-Approx
-%define upstream_version 3.28
 Name:       perl-%{upstream_name}
-Version:    %{upstream_version}
-Release:	1
+Version:    3.28
+Release:	2
 
 Summary:    Perl extension for approximate matching (fuzzy matching)
 License:    GPL+ or Artistic
@@ -20,7 +19,7 @@ vocabularies (colour color), genetic mutations (GAG ACT), abbreviations
 (McScot, MacScot).
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -q -n %{upstream_name}-%{version}
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
@@ -49,9 +48,7 @@ vocabularies (colour color), genetic mutations (GAG ACT), abbreviations
 
 * Wed Jul 29 2009 Jérôme Quelin <jquelin@mandriva.org> 3.260.0-1mdv2010.0
 + Revision: 404414
-- rebuild using %%perl_convert_version
-
-* Thu Jul 31 2008 Thierry Vignaud <tv@mandriva.org> 3.26-7mdv2009.0
+- rebuild using %3.28 Thu Jul 31 2008 Thierry Vignaud <tv@mandriva.org> 3.26-7mdv2009.0
 + Revision: 258388
 - rebuild
 
